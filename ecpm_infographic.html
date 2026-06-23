@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECPM Marine Biodiversity Sidebar</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Base widget reset to blend into ArcGIS dashboard panels */
+        body {
+            margin: 0;
+            background-color: #ffffff; /* Match dashboard panel white */
+        }
+
+        /* Clean scrollbar for narrow dashboard iframes */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f3f4f6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c5cbd3;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+
+        /* Esri Dashboard brand blue */
+        .esri-header-bg {
+            background-color: #004bac; /* Matched to the image's left panel headers */
+        }
+        
+        /* Chart matching colors */
+        .chart-cyan { background-color: #00bede; }
+        .chart-cyan-text { color: #00bede; }
+        .chart-green { background-color: #3bb358; }
+        .chart-green-text { color: #3bb358; }
+        .chart-yellow { background-color: #ffc200; }
+        .chart-yellow-text { color: #dcb300; }
+    </style>
+</head>
+<body class="font-sans text-gray-700 text-sm antialiased w-full h-full">
+
+    <div class="w-full flex flex-col">
+
+        <!-- Intro Text -->
+        <div class="p-3 text-xs leading-relaxed text-gray-600 border-b border-gray-200">
+            The East Coast region (ECPM) spans four states, collectively forming a critical ecological corridor along the South China Sea.
+        </div>
+
+        <!-- 1. State Contributions -->
+        <div class="esri-header-bg text-white px-3 py-2 font-semibold text-xs tracking-wide">
+            State Biodiversity Contributions
+        </div>
+        
+        <div class="p-3 flex flex-col gap-3 border-b border-gray-200">
+            <!-- Kelantan -->
+            <div class="flex items-start gap-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Flag_of_Kelantan.svg" alt="Kelantan Flag" class="mt-0.5 w-6 h-6 rounded-full object-cover shrink-0 border border-gray-300 shadow-sm" onerror="this.onerror=null;this.src='https://placehold.co/24x24/e2e8f0/64748b?text=K'">
+                <div>
+                    <span class="font-bold text-gray-800 text-xs">Kelantan:</span>
+                    <span class="text-xs text-gray-600">Mangrove-fringed coasts & productive fisheries.</span>
+                </div>
+            </div>
+
+            <!-- Terengganu -->
+            <div class="flex items-start gap-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Flag_of_Terengganu.svg" alt="Terengganu Flag" class="mt-0.5 w-6 h-6 rounded-full object-cover shrink-0 border border-gray-300 shadow-sm" onerror="this.onerror=null;this.src='https://placehold.co/24x24/e2e8f0/64748b?text=T'">
+                <div>
+                    <span class="font-bold text-gray-800 text-xs">Terengganu:</span>
+                    <span class="text-xs text-gray-600">Coral-rich islands & major turtle nesting areas.</span>
+                </div>
+            </div>
+
+            <!-- Pahang -->
+            <div class="flex items-start gap-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Pahang.svg" alt="Pahang Flag" class="mt-0.5 w-6 h-6 rounded-full object-cover shrink-0 border border-gray-300 shadow-sm" onerror="this.onerror=null;this.src='https://placehold.co/24x24/e2e8f0/64748b?text=P'">
+                <div>
+                    <span class="font-bold text-gray-800 text-xs">Pahang:</span>
+                    <span class="text-xs text-gray-600">High-cover reefs & extensive mangrove habitats.</span>
+                </div>
+            </div>
+
+            <!-- Johor -->
+            <div class="flex items-start gap-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Flag_of_Johor.svg" alt="Johor Flag" class="mt-0.5 w-6 h-6 rounded-full object-cover shrink-0 border border-gray-300 shadow-sm" onerror="this.onerror=null;this.src='https://placehold.co/24x24/e2e8f0/64748b?text=J'">
+                <div>
+                    <span class="font-bold text-gray-800 text-xs">Johor:</span>
+                    <span class="text-xs text-gray-600">Archipelagos with notable seagrass & coral diversity.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Ecosystems (Matching Chart Colors) -->
+        <div class="esri-header-bg text-white px-3 py-2 font-semibold text-xs tracking-wide">
+            Interconnected Ecosystems
+        </div>
+        
+        <div class="p-3 border-b border-gray-200">
+            <p class="text-xs text-gray-600 mb-3">
+                Vital to communities heavily dependent on coastal tourism and fisheries.
+            </p>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-teal-50 text-[10px] uppercase font-bold tracking-wider rounded border border-teal-200 flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full chart-cyan"></span> Coral Reefs
+                </span>
+                <span class="px-2 py-1 bg-green-50 text-[10px] uppercase font-bold tracking-wider rounded border border-green-200 flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full chart-green"></span> Seagrass
+                </span>
+                <span class="px-2 py-1 bg-yellow-50 text-[10px] uppercase font-bold tracking-wider rounded border border-yellow-200 flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full chart-yellow"></span> Mangroves
+                </span>
+            </div>
+        </div>
+
+        <!-- 3. Threats -->
+        <div class="bg-red-50 text-red-800 px-3 py-2 font-semibold text-xs tracking-wide border-y border-red-200">
+            <i class="fa-solid fa-triangle-exclamation mr-1"></i> Mounting Pressures
+        </div>
+        
+        <div class="p-3 grid grid-cols-2 gap-2 border-b border-gray-200">
+            <div class="bg-white border border-gray-100 p-2 rounded text-center shadow-sm">
+                <i class="fa-solid fa-building text-red-500 mb-1"></i>
+                <div class="text-[10px] font-semibold leading-tight">Coastal Development</div>
+            </div>
+            <div class="bg-white border border-gray-100 p-2 rounded text-center shadow-sm">
+                <i class="fa-solid fa-trowel-bricks text-red-500 mb-1"></i>
+                <div class="text-[10px] font-semibold leading-tight">Sand Mining</div>
+            </div>
+            <div class="bg-white border border-gray-100 p-2 rounded text-center shadow-sm">
+                <i class="fa-solid fa-anchor-circle-xmark text-red-500 mb-1"></i>
+                <div class="text-[10px] font-semibold leading-tight">Overfishing</div>
+            </div>
+            <div class="bg-white border border-gray-100 p-2 rounded text-center shadow-sm">
+                <i class="fa-solid fa-temperature-arrow-up text-red-500 mb-1"></i>
+                <div class="text-[10px] font-semibold leading-tight">Climate Impacts</div>
+            </div>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="p-4 bg-gray-50 text-center">
+            <p class="text-xs font-medium text-gray-800">
+                This combination of ecological richness and anthropogenic threats makes ECPM a priority landscape for marine conservation.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
